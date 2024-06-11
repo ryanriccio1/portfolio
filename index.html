@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryan Riccio | Software Engineer</title>
+
+    <meta name="Ryan Riccio | Software Engineer" content="Portfolio" />
+    <meta property="og:title" content="Ryan Riccio | Software Engineer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ryanriccio.com/" />
+    <meta name="description" content="Ryan Riccio's Portfolio Website" property="og:description" />
+    <meta
+      name="keywords"
+      content="Ryan, Riccio, PortFolio, Ryan's Portfolio, Riccio Portfolio, Ryan Riccio's Portfolio"
+    />
+    <meta name="author" content="Ryan Riccio" />
+    <meta name="application-name" content="Ryan Riccio's Portfolio" />
+    <meta name="theme-color" content="#0b5ed7" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script defer="defer" src="main.js" type="text/javascript"></script>
+  </head>
+  <body
+    data-bs-theme="dark"
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-root-margin="0px 0px -70%"
+    data-bs-smooth-scroll="true"
+  >
+    <canvas id="canvas"></canvas>
+
+    <!-- hero -->
+    <heading class="hero" id="hero">
+      <div class="container text-center my-auto">
+        <div class="heading_line_1">
+          I'm
+          <span class="text-primary-emphasis">Ryan</span>.
+        </div>
+        <h1 class="heading_line_2">I'm a Software Engineer.</h1>
+        <a role="button" class="heading_button btn btn-primary btn-lg mx-2 my-2" href="#about">More About Me</a>
+
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="heading_button btn btn-primary btn-lg mx-2 my-2"
+          data-bs-toggle="modal"
+          data-bs-target="#resumeModal"
+        >
+          See Résumé
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="resumeModal" tabindex="-1">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5">Resume</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <iframe src="./img/resume.pdf" style="width: 100%; height: 100%; border: none"></iframe>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </heading>
+
+    <!-- nav -->
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary w-100">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-pills navbar-nav-scroll ms-auto mb-2 mb-lg-0 me-3 fs-3">
+            <a class="nav-link px-3" href="#about">About</a>
+            <a class="nav-link px-3" href="#projects">Projects</a>
+            <a class="nav-link px-3" href="#experience">Experience</a>
+            <a class="nav-link px-3" href="#contact">Contact</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- about -->
+    <section id="about">
+      <h1 class="display-3 text-center my-5" style="display: block">About</h1>
+
+      <div class="container about my-5">
+        <div class="profile w-50">
+          <div class="w-75 my-3">
+            <img
+              src="./img/profile_pic.jpg"
+              class="img-fluid border border-secondary border-2 rounded-circle mx-auto d-block"
+              alt="Profile picture of Ryan"
+            />
+          </div>
+          <p class="profile__blurb text-center">
+            Hello! My name is Ryan and I'm a highly skilled and detail-oriented software developer. I'm a hard-working
+            critical thinker who creates interesting and effective solutions to complex problems. I bring strong
+            problem-solving skills and I work well in a team-based environment. In my free time I run a home server for
+            a few users. I also enjoy bike riding and playing guitar.
+          </p>
+        </div>
+        <div class="skills container w-auto p-0 m-0 text-center">
+          <div class="row m-3">
+            <div class="col m-1 skill_item cplusplus rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">C++</p>
+            </div>
+            <div class="col m-1 skill_item python rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">Python</p>
+            </div>
+            <div class="col m-1 skill_item c rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">C</p>
+            </div>
+            <div class="col m-1 skill_item csharp rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">C#</p>
+            </div>
+            <div class="col m-1 skill_item java rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">Java</p>
+            </div>
+          </div>
+          <div class="row m-3">
+            <div class="col m-1 skill_item docker rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">Docker</p>
+            </div>
+            <div class="col m-1 skill_item sql rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">SQL</p>
+            </div>
+            <div class="col m-1 skill_item linux rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">Linux</p>
+            </div>
+            <div class="col m-1 skill_item bash rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">Bash</p>
+            </div>
+
+            <div class="col m-1 skill_item matlab rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">MATLAB</p>
+            </div>
+          </div>
+          <div class="row m-3">
+            <div class="col m-1 skill_item html rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">HTML</p>
+            </div>
+            <div class="col m-1 skill_item css rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">CSS</p>
+            </div>
+            <div class="col m-1 skill_item javascript rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">JavaScript</p>
+            </div>
+            <div class="col m-1 skill_item php rounded-4 border border-secondary border-2 bg-secondary-subtle">
+              <img
+                style="width: 100%; max-width: 90px"
+                class="img-fluid mt-2"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+              />
+              <p class="mt-2 mb-1 pb-1 fw-semibold">PHP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section class="projects" id="projects">
+      <h1 class="display-3 text-center my-5" style="display: block">Projects</h1>
+      <div class="container text-center">
+        <div class="row mx-auto my-auto justify-content-evenly">
+          <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/memory_manager.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">Memory Manager Simulator</h5>
+                      <p class="card-text">
+                        ImGui (GLFW) C++ Application to help user's visualize how an operating system manages virtual
+                        memory between processes.
+                      </p>
+                      <a
+                        href="https://github.com/ryanriccio1/MemoryManagerSimulator"
+                        target="_blank"
+                        class="btn btn-primary"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/arch.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">RISC-V Architecture</h5>
+                      <p class="card-text">
+                        Custom RISC-V 32-bit(IM) Architecture and emulator that can run compiled C++20.
+                      </p>
+                      <a href="https://github.com/ryanriccio1/RV32IMEmulator" target="_blank" class="btn btn-primary"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/gpg.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">GPG Agent</h5>
+                      <p class="card-text">
+                        GPG compatible encryption agent with 3DES, AES, SHA1, SHA2, MD5, S2K manually implemented.
+                      </p>
+                      <a href="https://github.com/ryanriccio1/GPGAgent" target="_blank" class="btn btn-primary"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/file_mgr.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">FAT32/16 File Manager</h5>
+                      <p class="card-text">
+                        Commandline interface for a FAT32/16 disk image with multiple addressing modes supported.
+                      </p>
+                      <a href="https://github.com/ryanriccio1/file-manager-c" target="_blank" class="btn btn-primary"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/crypto.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">Cryptographic Analyzer</h5>
+                      <p class="card-text">
+                        Used pybind11 to write fast, multithreaded (GIL-free) Python libraries to "crack" simple
+                        encrpytion algorithms.
+                      </p>
+                      <a href="https://github.com/ryanriccio1/crypto" target="_blank" class="btn btn-primary">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/cancer.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">Cancer/SNP Database</h5>
+                      <p class="card-text">
+                        MySQL database to map patient information to Single Nucleotide Polymorphisms within specific
+                        genes to find Cancer trends.
+                      </p>
+                      <a
+                        href="https://medlineplus.gov/genetics/understanding/genomicresearch/snp/"
+                        target="_blank"
+                        class="btn btn-primary"
+                        >SNP Wiki</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/ram_programmer.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">Ram Programmer</h5>
+                      <p class="card-text">
+                        Used direct port manipulation to control Arduino in a breadboard 8-bit CPU as a realtime OS
+                        loader.
+                      </p>
+                      <a
+                        href="https://github.com/ryanriccio1/ArduinoRamProgrammer"
+                        target="_blank"
+                        class="btn btn-primary"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/rpi_sacn.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">RPi4 sACN-WS2811</h5>
+                      <p class="card-text">
+                        Wrote Debian service to control WS2811 LEDs over sACN with Open Lighting Architecture
+                        integration.
+                      </p>
+                      <a href="https://github.com/ryanriccio1/rpi-sacn-neopixel" target="_blank" class="btn btn-primary"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/finance_mgr.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">Finance Manager</h5>
+                      <p class="card-text">
+                        User-based stock trading app written with WPF and SQLite (EntityFramework).
+                      </p>
+                      <a href="https://github.com/ryanriccio1/finance-manager" target="_blank" class="btn btn-primary">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-6">
+                  <div class="card mx-auto" style="width: 30vw; max-width: 600px; min-width: 250px">
+                    <img src="./img/blockchain.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">Blockchain Analyzer</h5>
+                      <p class="card-text">
+                        Python program to traverse the blockchain and parse transaction information.
+                      </p>
+                      <a href="" target="_blank" class="btn btn-primary-disabled disabled">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- work -->
+    <section class="experience" id="experience">
+      <h1 class="display-3 text-center my-5" style="display: block">Experience</h1>
+      <div class="container my-5" style="max-width: 800px">
+        <h3 class="mt-5">Education</h3>
+        <div class="card my-3">
+          <h5 class="card-header">Bachelor of Science - BS, Computer Science</h5>
+          <div class="card-body">
+            <h5 class="card-title">Concordia University Irvine</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">August 2022 - May 2024</h6>
+            <p class="card-text card_experience_text">
+              <i>GPA: 3.96 (4.0 Program)</i><br/>
+              <b>Relevant Coursework:</b> Advanced Operating Systems, Server-Side Development, ObjectOriented Programming, Information Security, Computer Architecture and Assembly, Networking, Data Structures, Numerical Analysis.
+            </p>
+          </div>
+        </div>
+        <div class="card my-3">
+          <div class="card-body">
+            <h5 class="card-title">Austin Community College</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">January 2020 - May 2022</h6>
+            <p class="card-text card_experience_text">
+              <i>GPA: 4.00</i><br/>
+              Complete basic general education requirements. 
+            </p>
+          </div>
+        </div>
+        <h3 class="mt-5">Work</h3>
+        <div class="card my-3">
+          <h5 class="card-header">Co-Owner</h5>
+          <div class="card-body">
+            <h5 class="card-title">MAD Production LLC</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">April 2022 - January 2024</h6>
+            <p class="card-text card_experience_text">
+              Established a production company specializing in live audio and lighting for corporate/live events across the U.S. Participated in providing labor to shows with more than 20,000+ attendees. Created experiences for companies such as Armani, iHeart Radio, Krug, Dom Perignon, Ford, Spotify, HBO Max, Apple TV, Facebook, and various others. Worked with talent as Steve-O, Charlie Puth, The Chainsmokers, Shawn Mendes, Lada Gaga, Anderson .Paak, Mehro, and many more.
+            </p>
+          </div>
+        </div>
+        <div class="card my-3">
+          <h5 class="card-header">Service Manager IT</h5>
+          <div class="card-body">
+            <h5 class="card-title">Chiptole Mexican Grill</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">March 2021 - May 2022</h6>
+            <p class="card-text card_experience_text">
+              Participated in a comprehensive restaurant management program to learn what is required to run a successful restaurant. Demonstrated strong leadership skills by managing team members, budget, food safety, and compliance, as well as guest experience.
+            </p>
+          </div>
+        </div>
+        <div class="card my-3">
+          <h5 class="card-header">Team Member</h5>
+          <div class="card-body">
+            <h5 class="card-title">Whataburger</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">August 2020 - February 2021</h6>
+            <p class="card-text card_experience_text">
+              Helped to accomplish various food service tasks alongside a team of people in an accurate and timely manner.
+            </p>
+          </div>
+        </div>
+        <h3 class="mt-5">Volunteer</h3>
+        <div class="card my-3">
+          <div class="card-body">
+            <h5 class="card-title">Hill Country Bible Church</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">February 2020 - May 2022</h6>
+            <p class="card-text card_experience_text">
+              Helped to create professional services in a team environment by using technical skills to operate cameras, as well as pro-audio and pro-lighting systems.
+            </p>
+          </div>
+        </div>
+        <div class="card my-3">
+          <div class="card-body">
+            <h5 class="card-title">Beachpoint Church</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">August 2016 - December 2019</h6>
+            <p class="card-text card_experience_text">
+              Worked in a team environment to prepare for services weekly. Helped to design, implement, and maintain technical systems and solutions, as well as operate pro-audio and pro-lighting equipment.
+            </p>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section classs="contact" id="contact">
+      <h1 class="display-3 text-center m-auto" style="display: block">Contact</h1>
+      <div class="container m-auto mb-5" style="max-width: 500px">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="381191b9-9e1c-40e1-a368-9d4b392db16f" />
+          <label class="form-label mt-3" for="name">Name</label>
+          <input class="form-control mx-auto" type="text" name="name" required />
+          <label class="form-label mt-3" for="email">Email</label>
+          <input class="form-control" type="email" name="email" required />
+          <label class="form-label mt-3" for="message">Message</label>
+          <textarea class="form-control" name="message" rows="5" required></textarea>
+          <div class="my-3 h-captcha" data-captcha="true"></div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer bg-body-tertiary">
+      <div class="container text-center p-3">
+        <a class="mx-2" href="https://github.com/ryanriccio1" target="_blank"
+          ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"
+            />
+          </svg>
+        </a>
+        <a class="mx-2" href="https://www.linkedin.com/in/ryanriccio1/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+            />
+          </svg>
+        </a>
+      </div>
+      <h5 class="text-center p-2" style="display: block">©2024 Ryan Riccio</h5>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
